@@ -1,0 +1,49 @@
+@keyframes moveClouds {
+  0% {
+    transform: translateX(100vw) translateY(0);
+  }
+  50% {
+    transform: translateX(50vw) translateY(10px); // Легкое отклонение
+  }
+  100% {
+    transform: translateX(-100vw) translateY(0);
+  }
+}
+
+.catalog {
+  position: relative;
+  width: 100%;
+  height: 100vh; // Полная высота экрана
+  background-color: skyblue;
+  overflow: hidden;
+
+  .cloud {
+    position: absolute;
+    width: 100vw; // Ширина на всю ширину экрана
+    height: auto;
+    animation: moveClouds linear infinite;
+
+    svg {
+      width: 200px; // Размер самого SVG
+      height: auto;
+    }
+  }
+
+  .cloud1 {
+    top: 15%;
+    animation-duration: 22s;
+    animation-delay: 0s;
+  }
+
+  .cloud3 {
+    top: 70%;
+    animation-duration: 26s;
+    animation-delay: -10s;
+  }
+
+  .cloud5 {
+    top: 55%;
+    animation-duration: 35s;
+    animation-delay: -8s;
+  }
+}
